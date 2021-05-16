@@ -66,7 +66,7 @@ impl DataFrame {
         } else if self.column_names.len() != row.len() {
             Err(Box::new(std::io::Error::new(
                 std::io::ErrorKind::Other,
-                "add_row needs initial column names",
+                "add_row with a row that doesn't match number of columns",
             )))
         } else {
             // match the type as we go
